@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var input = ""
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TextField("Enter city", text: $input)
+                .font(.title)
+            
+            Divider()
+            
+            Text(input)
+                .font(.body)
+        }.padding()
     }
 }
 
