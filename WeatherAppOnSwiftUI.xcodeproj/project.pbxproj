@@ -14,6 +14,7 @@
 		8B4A789128762715005A2AEC /* WeatherAppOnSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A789028762715005A2AEC /* WeatherAppOnSwiftUITests.swift */; };
 		8B4A789B28762715005A2AEC /* WeatherAppOnSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A789A28762715005A2AEC /* WeatherAppOnSwiftUIUITests.swift */; };
 		8B4A789D28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A789C28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift */; };
+		8B4A78AB28762BBE005A2AEC /* WebServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A78AA28762BBE005A2AEC /* WebServiceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		8B4A789628762715005A2AEC /* WeatherAppOnSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppOnSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4A789A28762715005A2AEC /* WeatherAppOnSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppOnSwiftUIUITests.swift; sourceTree = "<group>"; };
 		8B4A789C28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppOnSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B4A78AA28762BBE005A2AEC /* WebServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		8B4A787E28762713005A2AEC /* WeatherAppOnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8B4A78A928762BAE005A2AEC /* Model */,
 				8B4A787F28762713005A2AEC /* WeatherAppOnSwiftUIApp.swift */,
 				8B4A788128762713005A2AEC /* ContentView.swift */,
 				8B4A788328762715005A2AEC /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				8B4A789C28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppOnSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		8B4A78A928762BAE005A2AEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B4A78AA28762BBE005A2AEC /* WebServiceController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4A78AB28762BBE005A2AEC /* WebServiceController.swift in Sources */,
 				8B4A788228762713005A2AEC /* ContentView.swift in Sources */,
 				8B4A788028762713005A2AEC /* WeatherAppOnSwiftUIApp.swift in Sources */,
 			);
