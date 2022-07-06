@@ -15,6 +15,7 @@
 		8B4A789B28762715005A2AEC /* WeatherAppOnSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A789A28762715005A2AEC /* WeatherAppOnSwiftUIUITests.swift */; };
 		8B4A789D28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A789C28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift */; };
 		8B4A78AB28762BBE005A2AEC /* WebServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A78AA28762BBE005A2AEC /* WebServiceController.swift */; };
+		8B4A78AD28762E50005A2AEC /* OpenWeatherMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A78AC28762E50005A2AEC /* OpenWeatherMapController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		8B4A789A28762715005A2AEC /* WeatherAppOnSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppOnSwiftUIUITests.swift; sourceTree = "<group>"; };
 		8B4A789C28762715005A2AEC /* WeatherAppOnSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppOnSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8B4A78AA28762BBE005A2AEC /* WebServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceController.swift; sourceTree = "<group>"; };
+		8B4A78AC28762E50005A2AEC /* OpenWeatherMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8B4A78AA28762BBE005A2AEC /* WebServiceController.swift */,
+				8B4A78AC28762E50005A2AEC /* OpenWeatherMapController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B4A78AB28762BBE005A2AEC /* WebServiceController.swift in Sources */,
+				8B4A78AD28762E50005A2AEC /* OpenWeatherMapController.swift in Sources */,
 				8B4A788228762713005A2AEC /* ContentView.swift in Sources */,
 				8B4A788028762713005A2AEC /* WeatherAppOnSwiftUIApp.swift in Sources */,
 			);

@@ -15,5 +15,5 @@ public enum WebServiceControllerError: Error {
 
 public protocol WebServiceController {
     func fetchWeatherData(for city: String,
-                          completionHandler: (String?, WebServiceControllerError?) -> Void)
+                          completionHandler: @escaping (String?, WebServiceControllerError?) -> Void)
 }
