@@ -13,7 +13,7 @@ private enum API {
 
 final class OpenWeatherMapController: WebServiceController {
     func fetchWeatherData(for city: String, completionHandler: @escaping (String?, WebServiceControllerError?) -> Void) {
-        let endpoint = "https://api.openweathermap.org/data/2.5/weather?q=\(city)}&appid=\(API.key)"
+        let endpoint = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(API.key)"
         
         guard let safeURLString = endpoint.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let endpointURL = URL(string: safeURLString) else {
@@ -34,9 +34,8 @@ final class OpenWeatherMapController: WebServiceController {
             // decode json
             let decoder = JSONDecoder()
             do {
-                let weatherList = try decoder.decode(OpenWeatherMapContainer.self, from: responseData)
-                guard let weatherInfo = weatherList.list?.first,
-                      let weather = weatherInfo.weather.first?.main,
+                let weatherInfo = try decoder.decode(OpenMapWeatherData.self, from: responseData)
+                guard let weather = weatherInfo.weather.first?.main,
                       let temperature = weatherInfo.main.temp else {
                           completionHandler(nil, .invalidPayload(fetchURL: endpointURL))
                           return

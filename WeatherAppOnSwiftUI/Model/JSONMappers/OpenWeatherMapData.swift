@@ -11,9 +11,6 @@ import Foundation
 // The OpenWeatherMap API returns a more verbose JSON response
 // The following Swift structures include a subset of the returned data, because we only need the weather description and the temperature - the other details are skipped.
 // Check https://openweathermap.org/current for more information.
-struct OpenWeatherMapContainer: Codable {
-    var list: [OpenMapWeatherData]?
-}
 
 struct OpenMapWeatherData: Codable {
     var weather: [OpenMapWeatherWeather]
