@@ -12,18 +12,18 @@ import Foundation
 // The following Swift structures include a subset of the returned data, because we only need the weather description and the temperature - the other details are skipped.
 // Check https://openweathermap.org/current for more information.
 
-struct OpenMapWeatherData: Codable {
-    var weather: [OpenMapWeatherWeather]
-    var main: OpenMapWeatherMain
+struct OpenWeatherMapData: Codable {
+    var weather: [OpenWeatherMapWeather]
+    var main: OpenWeatherMapMain
 }
 
-struct OpenMapWeatherWeather: Codable {
+struct OpenWeatherMapWeather: Codable {
     var id: Int?
     var main: String?
     var description: String?
     var icon: String?
 }
 
-struct OpenMapWeatherMain: Codable {
+struct OpenWeatherMapMain: Codable {
     var temp: Float?
 }

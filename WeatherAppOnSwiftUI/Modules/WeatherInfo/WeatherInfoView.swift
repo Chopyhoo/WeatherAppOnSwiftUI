@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WeatherInfoView: View {
     @State private var input = ""
     
     @ObservedObject private var viewModel = WeatherViewModel()
@@ -33,6 +33,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WeatherInfoView()
     }
 }

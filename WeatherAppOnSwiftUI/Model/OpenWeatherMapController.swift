@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import Combine
 
-private enum API {
-    static let key = ""
+private struct API {
+    static let key: String = {
+        guard let path = Bundle.main.path(forResource: "OpenWeatherMapAPI-Info", ofType: "plist"),
+              let plist = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject>,
+              let key = plist["API_KEY"] as? String
+        else {
+          fatalError("No api key was fount in OpenWeatherMapAPI-Info.plist")
+        }
+        return key
+    }()
 }
 
 final class OpenWeatherMapController: WebServiceController {
@@ -34,7 +43,7 @@ final class OpenWeatherMapController: WebServiceController {
             // decode json
             let decoder = JSONDecoder()
             do {
-                let weatherInfo = try decoder.decode(OpenMapWeatherData.self, from: responseData)
+                let weatherInfo = try decoder.decode(OpenWeatherMapData.self, from: responseData)
                 guard let weather = weatherInfo.weather.first?.main,
                       let temperature = weatherInfo.main.temp else {
                           completionHandler(nil, .invalidPayload(fetchURL: endpointURL))
